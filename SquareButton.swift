@@ -20,6 +20,5 @@ struct SquareButton: View {
                 .cornerRadius(25)
                 .shadow(color: .gray.opacity(0.4), radius: 8, x: 0, y: 4)
         }
-        .buttonStyle(ScaleButtonStyle())
     }
 }
