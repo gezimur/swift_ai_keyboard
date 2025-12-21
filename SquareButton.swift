@@ -2,10 +2,12 @@ import SwiftUI
 
 struct SquareButton: View {
     let label: String
-    let action: () -> Void
+    let action: (String) -> Void
     
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            action(label)
+        }) {
             Text(label)
                 .font(.system(size: 48, weight: .semibold))
                 .foregroundColor(.white)

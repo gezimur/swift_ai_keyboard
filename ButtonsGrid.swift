@@ -2,11 +2,12 @@ import SwiftUI
 
 struct ButtonsGrid: View {
     let items: [[String]]
-    
+    let subscriber: (String) -> Void
+
     var body: some View {
         VStack{
             ForEach(items, id: \.self){
-                item in ButtonsRow(items: item)
+                item in ButtonsRow(items: item, subscriber: subscriber)
             }
         }
     }
@@ -14,12 +15,13 @@ struct ButtonsGrid: View {
 
 struct ButtonsRow: View {
     let items: [String]
+    let subscriber: (String) -> Void
 
     var body: some View {
         HStack{
             ForEach(items, id: \.self){
-                item in SquareButton(label: item, action: {
-                    print(item)
+                item in SquareButton(label: item, action: (String text){
+                    subscriber(text)
                 })
             }
         }
