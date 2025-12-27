@@ -20,9 +20,7 @@ struct ButtonsRow: View {
     var body: some View {
         HStack{
             ForEach(items, id: \.self){
-                item in SquareButton(label: item, action: (String text){
-                    subscriber(text)
-                })
+                item in SquareButton(label: item, action: subscriber)
             }
         }
     }
