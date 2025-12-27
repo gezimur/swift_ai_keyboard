@@ -1,26 +1,27 @@
 import SwiftUI
 
-class MiniFeaturesPanel: View {
-    private var request_subscriber: (String, [String]) -> Void
-    private var features: [String] = ["Tr":"Translate", "*A":"Correct", "0_0":"Emoji", "<->":"Expand"]
-    var body: some View 
+struct MiniFeaturesPanel: View {
+    var request_subscriber: (String, [String]) -> Void
+    private let features = ["Tr", "*A", "0_0", "<->"]
+    private let features_info = ["Tr":"Translate", "*A":"Correct", "0_0":"Emoji", "<->":"Expand"]
     
-    init(request_subscriber: (String, [String]) -> Void) {
-        self.request_subscriber = request_subscriber
-
-        self.body = VStack{
+    var body: some View {
+        HStack{
             SquareButton(label: "<--", action: {
-                request_subscriber("back", [])
+                (str : String) in
+                self.request_subscriber("back", [])
             })
             HStack{
-                ForEach(features, id: \.self){
-                    features in SquareButton(label: features, action: {
-                        request_subscriber("state", [features])
+                ForEach(self.features, id: \.self){
+                    feature in SquareButton(label: feature, action: {
+                        (str : String) in
+                        self.request_subscriber("state", ["keys + input tool", feature])
                     })
                 }
             }
             SquareButton(label: "...", action: {
-                request_subscriber("state", ["features"])
+                (str : String) in
+                self.request_subscriber("state", ["features"])
             })
         }
     }

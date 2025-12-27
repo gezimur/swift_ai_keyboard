@@ -9,9 +9,9 @@ struct SquareButton: View {
             action(label)
         }) {
             Text(label)
-                .font(.system(size: 48, weight: .semibold))
+                .font(.system(size: 12, weight: .semibold))
                 .foregroundColor(.white)
-                .frame(width: 150, height: 150)
+                .frame(width: 30, height: 30)
                 .background(
                     LinearGradient(
                         gradient: Gradient(colors: [Color.blue, Color.blue.opacity(0.8)]),

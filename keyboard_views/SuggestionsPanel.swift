@@ -1,27 +1,27 @@
 import SwiftUI
 
-class SuggestionsPanel: View {
-    private var request_subscriber: (String, [String]) -> Void
-    @state private var suggestions: [String] = [""]
-    var body: some View 
-    
-    init(request_subscriber: (String, [String]) -> Void) {
-        self.request_subscriber = request_subscriber
+struct SuggestionsPanel: View {
+    var request_subscriber: (String, [String]) -> Void
+    @State private var suggestions: [String] = [""]
 
-        self.body = VStack{
-            SquareButton(label: "<--", action: {
-                request_subscriber("back", [])
+    var body: some View {
+        HStack{
+            SquareButton(label: "L", action: {
+                (str: String) in
+                self.request_subscriber("state", ["keys + features"])
             })
+            Spacer()
             HStack{
                 ForEach(suggestions, id: \.self){
                     suggestion in SquareButton(label: suggestion, action: {
-                        request_subscriber("key", [suggestion + " "])
+                        (str: String) in
+                        self.request_subscriber("key", [suggestion + " "])
                     })
                 }
             }
         }
     }
-
+    
     func setSuggestions(suggestions: [String]) {
         self.suggestions = suggestions
     }

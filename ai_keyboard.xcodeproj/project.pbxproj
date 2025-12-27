@@ -7,18 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B231F46A2EF83F1600996B80 /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4662EF83F1600996B80 /* ButtonsGrid.swift */; };
-		B231F46B2EF83F1600996B80 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4692EF83F1600996B80 /* SquareButton.swift */; };
 		B231F46C2EF83F1600996B80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4672EF83F1600996B80 /* ContentView.swift */; };
 		B231F46D2EF83F1600996B80 /* KeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4682EF83F1600996B80 /* KeyboardApp.swift */; };
+		B231F4A52F001F1100996B80 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48A2F001F1100996B80 /* emoji.png */; };
+		B231F4A62F001F1100996B80 /* format.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48D2F001F1100996B80 /* format.png */; };
+		B231F4A72F001F1100996B80 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4922F001F1100996B80 /* redo.png */; };
+		B231F4A82F001F1100996B80 /* compress.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4872F001F1100996B80 /* compress.png */; };
+		B231F4A92F001F1100996B80 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48C2F001F1100996B80 /* expand.png */; };
+		B231F4AA2F001F1100996B80 /* scan.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4962F001F1100996B80 /* scan.png */; };
+		B231F4AB2F001F1100996B80 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48E2F001F1100996B80 /* goal.png */; };
+		B231F4AC2F001F1100996B80 /* paraphrase.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4912F001F1100996B80 /* paraphrase.png */; };
+		B231F4AD2F001F1100996B80 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4862F001F1100996B80 /* close.png */; };
+		B231F4AE2F001F1100996B80 /* tone.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49A2F001F1100996B80 /* tone.png */; };
+		B231F4AF2F001F1100996B80 /* translate.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49B2F001F1100996B80 /* translate.png */; };
+		B231F4B02F001F1100996B80 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4902F001F1100996B80 /* more.png */; };
+		B231F4B12F001F1100996B80 /* swap.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4992F001F1100996B80 /* swap.png */; };
+		B231F4B22F001F1100996B80 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4882F001F1100996B80 /* correct.png */; };
+		B231F4B32F001F1100996B80 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4952F001F1100996B80 /* right-arrow.png */; };
+		B231F4B42F001F1100996B80 /* del.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4892F001F1100996B80 /* del.png */; };
+		B231F4B52F001F1100996B80 /* enter.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48B2F001F1100996B80 /* enter.png */; };
+		B231F4B62F001F1100996B80 /* lang.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48F2F001F1100996B80 /* lang.png */; };
+		B231F4B72F001F1100996B80 /* shift.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4982F001F1100996B80 /* shift.png */; };
+		B231F4B82F001F1100996B80 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49C2F001F1100996B80 /* undo.png */; };
+		B231F4B92F001F1100996B80 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4942F001F1100996B80 /* reply.png */; };
+		B231F4BA2F001F1100996B80 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4972F001F1100996B80 /* settings.png */; };
+		B231F4BB2F001F1100996B80 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4852F001F1100996B80 /* back.png */; };
+		B231F4BC2F001F1100996B80 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4932F001F1100996B80 /* refresh.png */; };
+		B231F4BD2F001F1100996B80 /* InputTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A02F001F1100996B80 /* InputTool.swift */; };
+		B231F4BE2F001F1100996B80 /* FeatureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F49F2F001F1100996B80 /* FeatureTool.swift */; };
+		B231F4BF2F001F1100996B80 /* SuggestionsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */; };
+		B231F4C02F001F1100996B80 /* FeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F49E2F001F1100996B80 /* FeaturesPanel.swift */; };
+		B231F4C12F001F1100996B80 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4832F001F1100996B80 /* SquareButton.swift */; };
+		B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4822F001F1100996B80 /* ButtonsGrid.swift */; };
+		B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A12F001F1100996B80 /* KeyboardPanel.swift */; };
+		B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B231F4582EF83EF200996B80 /* ai_keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ai_keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B231F4662EF83F1600996B80 /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
 		B231F4672EF83F1600996B80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B231F4682EF83F1600996B80 /* KeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardApp.swift; sourceTree = "<group>"; };
-		B231F4692EF83F1600996B80 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		B231F4822F001F1100996B80 /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
+		B231F4832F001F1100996B80 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		B231F4852F001F1100996B80 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		B231F4862F001F1100996B80 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		B231F4872F001F1100996B80 /* compress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compress.png; sourceTree = "<group>"; };
+		B231F4882F001F1100996B80 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
+		B231F4892F001F1100996B80 /* del.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = del.png; sourceTree = "<group>"; };
+		B231F48A2F001F1100996B80 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
+		B231F48B2F001F1100996B80 /* enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter.png; sourceTree = "<group>"; };
+		B231F48C2F001F1100996B80 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
+		B231F48D2F001F1100996B80 /* format.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = format.png; sourceTree = "<group>"; };
+		B231F48E2F001F1100996B80 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
+		B231F48F2F001F1100996B80 /* lang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lang.png; sourceTree = "<group>"; };
+		B231F4902F001F1100996B80 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		B231F4912F001F1100996B80 /* paraphrase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paraphrase.png; sourceTree = "<group>"; };
+		B231F4922F001F1100996B80 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
+		B231F4932F001F1100996B80 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		B231F4942F001F1100996B80 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply.png; sourceTree = "<group>"; };
+		B231F4952F001F1100996B80 /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
+		B231F4962F001F1100996B80 /* scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan.png; sourceTree = "<group>"; };
+		B231F4972F001F1100996B80 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		B231F4982F001F1100996B80 /* shift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shift.png; sourceTree = "<group>"; };
+		B231F4992F001F1100996B80 /* swap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swap.png; sourceTree = "<group>"; };
+		B231F49A2F001F1100996B80 /* tone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tone.png; sourceTree = "<group>"; };
+		B231F49B2F001F1100996B80 /* translate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = translate.png; sourceTree = "<group>"; };
+		B231F49C2F001F1100996B80 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
+		B231F49E2F001F1100996B80 /* FeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesPanel.swift; sourceTree = "<group>"; };
+		B231F49F2F001F1100996B80 /* FeatureTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTool.swift; sourceTree = "<group>"; };
+		B231F4A02F001F1100996B80 /* InputTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTool.swift; sourceTree = "<group>"; };
+		B231F4A12F001F1100996B80 /* KeyboardPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPanel.swift; sourceTree = "<group>"; };
+		B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniFeaturesPanel.swift; sourceTree = "<group>"; };
+		B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -45,10 +105,11 @@
 			children = (
 				B231F45A2EF83EF200996B80 /* ai_keyboard */,
 				B231F4592EF83EF200996B80 /* Products */,
-				B231F4662EF83F1600996B80 /* ButtonsGrid.swift */,
 				B231F4672EF83F1600996B80 /* ContentView.swift */,
 				B231F4682EF83F1600996B80 /* KeyboardApp.swift */,
-				B231F4692EF83F1600996B80 /* SquareButton.swift */,
+				B231F4842F001F1100996B80 /* aux_view */,
+				B231F49D2F001F1100996B80 /* icons */,
+				B231F4A42F001F1100996B80 /* keyboard_views */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +119,59 @@
 				B231F4582EF83EF200996B80 /* ai_keyboard.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B231F4842F001F1100996B80 /* aux_view */ = {
+			isa = PBXGroup;
+			children = (
+				B231F4822F001F1100996B80 /* ButtonsGrid.swift */,
+				B231F4832F001F1100996B80 /* SquareButton.swift */,
+			);
+			path = aux_view;
+			sourceTree = "<group>";
+		};
+		B231F49D2F001F1100996B80 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				B231F4852F001F1100996B80 /* back.png */,
+				B231F4862F001F1100996B80 /* close.png */,
+				B231F4872F001F1100996B80 /* compress.png */,
+				B231F4882F001F1100996B80 /* correct.png */,
+				B231F4892F001F1100996B80 /* del.png */,
+				B231F48A2F001F1100996B80 /* emoji.png */,
+				B231F48B2F001F1100996B80 /* enter.png */,
+				B231F48C2F001F1100996B80 /* expand.png */,
+				B231F48D2F001F1100996B80 /* format.png */,
+				B231F48E2F001F1100996B80 /* goal.png */,
+				B231F48F2F001F1100996B80 /* lang.png */,
+				B231F4902F001F1100996B80 /* more.png */,
+				B231F4912F001F1100996B80 /* paraphrase.png */,
+				B231F4922F001F1100996B80 /* redo.png */,
+				B231F4932F001F1100996B80 /* refresh.png */,
+				B231F4942F001F1100996B80 /* reply.png */,
+				B231F4952F001F1100996B80 /* right-arrow.png */,
+				B231F4962F001F1100996B80 /* scan.png */,
+				B231F4972F001F1100996B80 /* settings.png */,
+				B231F4982F001F1100996B80 /* shift.png */,
+				B231F4992F001F1100996B80 /* swap.png */,
+				B231F49A2F001F1100996B80 /* tone.png */,
+				B231F49B2F001F1100996B80 /* translate.png */,
+				B231F49C2F001F1100996B80 /* undo.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		B231F4A42F001F1100996B80 /* keyboard_views */ = {
+			isa = PBXGroup;
+			children = (
+				B231F49E2F001F1100996B80 /* FeaturesPanel.swift */,
+				B231F49F2F001F1100996B80 /* FeatureTool.swift */,
+				B231F4A02F001F1100996B80 /* InputTool.swift */,
+				B231F4A12F001F1100996B80 /* KeyboardPanel.swift */,
+				B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */,
+				B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */,
+			);
+			path = keyboard_views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +239,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B231F4A52F001F1100996B80 /* emoji.png in Resources */,
+				B231F4A62F001F1100996B80 /* format.png in Resources */,
+				B231F4A72F001F1100996B80 /* redo.png in Resources */,
+				B231F4A82F001F1100996B80 /* compress.png in Resources */,
+				B231F4A92F001F1100996B80 /* expand.png in Resources */,
+				B231F4AA2F001F1100996B80 /* scan.png in Resources */,
+				B231F4AB2F001F1100996B80 /* goal.png in Resources */,
+				B231F4AC2F001F1100996B80 /* paraphrase.png in Resources */,
+				B231F4AD2F001F1100996B80 /* close.png in Resources */,
+				B231F4AE2F001F1100996B80 /* tone.png in Resources */,
+				B231F4AF2F001F1100996B80 /* translate.png in Resources */,
+				B231F4B02F001F1100996B80 /* more.png in Resources */,
+				B231F4B12F001F1100996B80 /* swap.png in Resources */,
+				B231F4B22F001F1100996B80 /* correct.png in Resources */,
+				B231F4B32F001F1100996B80 /* right-arrow.png in Resources */,
+				B231F4B42F001F1100996B80 /* del.png in Resources */,
+				B231F4B52F001F1100996B80 /* enter.png in Resources */,
+				B231F4B62F001F1100996B80 /* lang.png in Resources */,
+				B231F4B72F001F1100996B80 /* shift.png in Resources */,
+				B231F4B82F001F1100996B80 /* undo.png in Resources */,
+				B231F4B92F001F1100996B80 /* reply.png in Resources */,
+				B231F4BA2F001F1100996B80 /* settings.png in Resources */,
+				B231F4BB2F001F1100996B80 /* back.png in Resources */,
+				B231F4BC2F001F1100996B80 /* refresh.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B231F46A2EF83F1600996B80 /* ButtonsGrid.swift in Sources */,
-				B231F46B2EF83F1600996B80 /* SquareButton.swift in Sources */,
+				B231F4BD2F001F1100996B80 /* InputTool.swift in Sources */,
+				B231F4BE2F001F1100996B80 /* FeatureTool.swift in Sources */,
+				B231F4BF2F001F1100996B80 /* SuggestionsPanel.swift in Sources */,
+				B231F4C02F001F1100996B80 /* FeaturesPanel.swift in Sources */,
+				B231F4C12F001F1100996B80 /* SquareButton.swift in Sources */,
+				B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */,
+				B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */,
+				B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */,
 				B231F46C2EF83F1600996B80 /* ContentView.swift in Sources */,
 				B231F46D2EF83F1600996B80 /* KeyboardApp.swift in Sources */,
 			);

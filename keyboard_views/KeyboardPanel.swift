@@ -1,8 +1,8 @@
 import SwiftUI
 
-class KeyboardPanel: View {
-    @state private var current_mode: String = "abc"
-    private var request_subscriber: (String, [String]) -> Void
+struct KeyboardPanel: View {
+    @State private var current_mode: String = "abc"
+    var request_subscriber: (String, [String]) -> Void
 
     let mode_switch_button_info = ["ABC": "123", "abc": "123", "123": "abc", "SYM": "abc"]
     let shift_button_info = ["ABC": "shift", "abc": "SHIFT", "123": "1/2", "SYM": "2/2"]
@@ -27,58 +27,54 @@ class KeyboardPanel: View {
                 [".", ",", "?", "!", "\""]
             ]]
 
-    var body: some View
-
-    init(request_subscriber: (String, [String]) -> Void) {
-        self.request_subscriber = request_subscriber
-
-        self.body = {
-            VStack{
-
-                ButtonsRow(items: central_rows_info[current_mode][0], subscriber: procKey)
-                ButtonsRow(items: central_rows_info[current_mode][1], subscriber: procKey)
-
-                HStack {
-                    SquareButton(label: shift_button_info[current_mode], action: procShift)
-                    ButtonsRow(items: central_rows_info[current_mode][2], subscriber: procKey)
-                    SquareButton(label: "Backspace", action: procBackspace)
-                }
-
-                HStack {
-                    SquareButton(label: mode_switch_button_info[current_mode], action: procModeSwitch)
-                    SquareButton(label: "Lang", action: {})
-                    SquareButton(label: "Space", action: procKey)
-                    SquareButton(label: "Enter", action: procEnter)
-                }
+    var body: some View {
+        VStack{
+            ButtonsRow(items: self.central_rows_info[self.current_mode]![0], subscriber: self.procKey)
+            ButtonsRow(items: self.central_rows_info[self.current_mode]![1], subscriber: self.procKey)
+            
+            HStack {
+                SquareButton(label: self.shift_button_info[self.current_mode]!, action: self.procShift)
+                ButtonsRow(items: self.central_rows_info[self.current_mode]![2], subscriber: self.procKey)
+                SquareButton(label: "Backspace", action: self.procBackspace)
+            }
+            
+            HStack {
+                SquareButton(label: self.mode_switch_button_info[self.current_mode]!, action: {
+                    (str : String) in
+                    self.procModeSwitch(key: str)
+                })
+                SquareButton(label: "Lang", action: {(str: String) in })
+                SquareButton(label: "Space", action: self.procKey)
+                SquareButton(label: "Enter", action: self.procEnter)
             }
         }
     }
-
-    private func procKey(key: String) {
-        request_subscriber("key", [key])
+    
+    func procKey(key: String) {
+        self.request_subscriber("key", [key])
     }
 
     private func procShift(key: String) {
-        if current_mode == "ABC" {
-            current_mode = "abc"
-        } else if current_mode == "abc" {
-            current_mode = "ABC"
-        } else if current_mode == "123" {
-            current_mode = "SYM"
-        } else if current_mode == "SYM" {
-            current_mode = "123"
+        if self.current_mode == "ABC" {
+            self.current_mode = "abc"
+        } else if self.current_mode == "abc" {
+            self.current_mode = "ABC"
+        } else if self.current_mode == "123" {
+            self.current_mode = "SYM"
+        } else if self.current_mode == "SYM" {
+            self.current_mode = "123"
         }
     }
 
     private func procModeSwitch(key: String) {
-        current_mode = mode_switch_button_info[current_mode]
+        self.current_mode = self.mode_switch_button_info[self.current_mode]!
     }
 
     private func procBackspace(key: String) {
-        request_subscriber("backspace", [""])
+        self.request_subscriber("backspace", [""])
     }
 
     private func procEnter(key: String) {
-        request_subscriber("enter", [""])
+        self.request_subscriber("enter", [""])
     }
 }

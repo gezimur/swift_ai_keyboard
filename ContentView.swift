@@ -1,46 +1,44 @@
 import SwiftUI
 
-class ContentView: View {
+struct ContentView: View {
     @State private var current_state: String = "keys + suggestions"
 
-    private var prev_state: [String] = ["keys + suggestions"]
-    private var current_args: [String] = []
+    @State private var prev_state: [String] = ["keys + suggestions"]
+    @State private var current_args: [String] = [""]
 
     var body: some View {
-        if current_state == "keys + suggestions" {
+        if self.current_state == "keys + suggestions" {
             VStack{
-                SuggestionsPanel(args: current_args, request_subscriber: procRequest)
-                KeyboardPanel(request_subscriber: procRequest)
+                SuggestionsPanel(request_subscriber: self.procRequest)
+                KeyboardPanel(request_subscriber: self.procRequest)
             }
-        } else if current_state == "keys + features" {
+        } else if self.current_state == "keys + features" {
             VStack{
-                MiniFeaturesPanel(request_subscriber: procRequest)
-                KeyboardPanel(request_subscriber: procRequest)
+                MiniFeaturesPanel(request_subscriber: self.procRequest)
+                KeyboardPanel(request_subscriber: self.procRequest)
             }
-        } else if current_state == "features" {
-            FeaturesPanel(request_subscriber: procRequest)
-        } else if current_state == "keys + input tool" {
+        } else if self.current_state == "features" {
+            FeaturesPanel(request_subscriber: self.procRequest)
+        } else if self.current_state == "keys + input tool" {
             VStack{
-                InputTool(args: current_args, request_subscriber: procRequest)
-                KeyboardPanel(request_subscriber: procRequest)
+                InputTool(feature_type: self.current_args[0], request_subscriber: self.procRequest)
+                KeyboardPanel(request_subscriber: self.procRequest)
             }
-        } else if current_state == "feature tool" {
-            FeatureTool(args: current_args, request_subscriber: procRequest)
-        } else {
-            print("Invalid state: \(current_state)")
+        } else if self.current_state == "feature tool" {
+            FeatureTool(args: self.current_args, request_subscriber: self.procRequest)
         }
     }
 
     private func procRequest(request: String, args: [String]) {
         if request == "back" {
-            current_state = prev_state[0]
-            current_args = prev_state[1..<prev_state.count]
+            self.current_state = self.prev_state[0]
+//            self.current_args = self.prev_state[1 : self.prev_state.count - 1]
         } else if request == "state" {
-            prev_state = current_state
-            prev_state.append(current_args)
+            self.prev_state = [self.current_state]
+            self.prev_state += self.current_args
 
-            current_state = args[0]
-            current_args = args[1..<args.count]
+            self.current_state = args[0]
+//            self.current_args = args[1..<args.count]
         } else {
             print("Processing request: \(request) with args: \(args)")
         }

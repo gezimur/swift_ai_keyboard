@@ -1,19 +1,15 @@
 import SwiftUI
 
-class FeatureTool: View {
-    private var args: [String]
-    private var request_subscriber: (String, [String]) -> Void
-
-    var body: some View 
+struct FeatureTool: View {
+    var args: [String]
+    var request_subscriber: (String, [String]) -> Void
     
-    init(args: [String], request_subscriber: (String, [String]) -> Void) {
-        self.args = args[0]
-        self.request_subscriber = request_subscriber
-
-        self.body = VStack{
+    var body: some View {
+        VStack{
             HStack{
                 Spacer()
                 SquareButton(label: "<--", action: {
+                    (str : String) in
                     request_subscriber("back", [])
                 })
             }
