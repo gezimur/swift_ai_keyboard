@@ -5,6 +5,9 @@ struct StateParams {
     var args: [String]
 }
 
+let main_frame_width = UIScreen.main.bounds.width
+let main_frame_width = UIScreen.main.bounds.height / 3
+
 struct ContentView: View {
     @State private var current_state: StateParams = StateParams(state: "keys + suggestions", args: [])
     @State private var prev_state: [StateParams] = [StateParams(state: "keys + suggestions", args: [])]
@@ -15,20 +18,25 @@ struct ContentView: View {
                 SuggestionsPanel(request_subscriber: self.procRequest)
                 KeyboardPanel(request_subscriber: self.procRequest)
             }
+            .frame(width: main_frame_width, height: main_frame_height)
         } else if self.current_state.state == "keys + features" {
             VStack{
                 MiniFeaturesPanel(request_subscriber: self.procRequest)
                 KeyboardPanel(request_subscriber: self.procRequest)
             }
+            .frame(width: main_frame_width, height: main_frame_height)
         } else if self.current_state.state == "features" {
             FeaturesPanel(request_subscriber: self.procRequest)
+            .frame(width: main_frame_width, height: main_frame_height)
         } else if self.current_state.state == "keys + input tool" {
             VStack{
                 InputTool(feature_type: self.current_state.args[0], request_subscriber: self.procRequest)
                 KeyboardPanel(request_subscriber: self.procRequest)
             }
+            .frame(width: main_frame_width, height: main_frame_height)
         } else if self.current_state.state == "feature tool" {
             FeatureTool(args: self.current_state.args, request_subscriber: self.procRequest)
+            .frame(width: main_frame_width, height: main_frame_height)
         }
     }
 
