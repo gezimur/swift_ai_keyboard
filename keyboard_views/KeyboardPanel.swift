@@ -33,19 +33,28 @@ struct KeyboardPanel: View {
             ButtonsRow(items: self.central_rows_info[self.current_mode]![1], subscriber: self.procKey)
             
             HStack {
-                SquareButton(label: self.shift_button_info[self.current_mode]!, action: self.procShift)
+                let items_count = self.central_rows_info[self.current_mode]![2].count + 3
+                
+                SquareButton(label: self.shift_button_info[self.current_mode]!, icon:"", action: self.procShift)
+                    .containerRelativeFrame(.horizontal, count: items_count, span: 1, spacing: 0.1)
                 ButtonsRow(items: self.central_rows_info[self.current_mode]![2], subscriber: self.procKey)
-                SquareButton(label: "Backspace", action: self.procBackspace)
+                    .containerRelativeFrame(.horizontal, count: items_count, span: items_count - 3, spacing: 0.1)
+                SquareButton(label: "Backspace", icon:"", action: self.procBackspace)
+                    .containerRelativeFrame(.horizontal, count: items_count, span: 1, spacing: 0.1)
             }
             
             HStack {
-                SquareButton(label: self.mode_switch_button_info[self.current_mode]!, action: {
+                SquareButton(label: self.mode_switch_button_info[self.current_mode]!, icon:"", action: {
                     (str : String) in
                     self.procModeSwitch(key: str)
                 })
-                SquareButton(label: "Lang", action: {(str: String) in })
-                SquareButton(label: "Space", action: self.procKey)
-                SquareButton(label: "Enter", action: self.procEnter)
+                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
+                SquareButton(label: "", icon:"lang", action: {(str: String) in })
+                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
+                SquareButton(label: "", icon:"", action: self.procKey)
+                    .containerRelativeFrame(.horizontal, count: 10, span: 6, spacing: 0.1)
+                SquareButton(label: "Enter", icon:"", action: self.procEnter, style: .square_accent)
+                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
             }
         }
     }

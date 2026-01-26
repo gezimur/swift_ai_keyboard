@@ -8,10 +8,10 @@ struct FeatureTool: View {
         VStack{
             HStack{
                 Spacer()
-                SquareButton(label: "<--", action: {
+                SquareButton(label: "", icon: "back", action: {
                     (str : String) in
                     request_subscriber("back", [])
-                })
+                }, style: .circle)
             }
             Text("Feature Tool is not implemented yet")
         }

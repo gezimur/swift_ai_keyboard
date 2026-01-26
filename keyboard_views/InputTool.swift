@@ -6,22 +6,33 @@ struct InputTool: View {
     @State private var notes: String = ""
     
     var body: some View {
-        VStack{
-            HStack{
-                SquareButton(label: "<--", action: {
-                    (str: String) in
-                    self.request_subscriber("back", [])
-                })
-                Spacer()
-                // if feature_type == ... then show special tools
-            }
-            TextEditor(text: $notes).frame(height: 200)
-            HStack{
-                SquareButton(label: "reset", action: {(str: String) in })
-                SquareButton(label: "undo", action: {(str: String) in })
-                SquareButton(label: "redo", action: {(str: String) in })
-                Spacer()
-                SquareButton(label: "apply", action: {(str: String) in })
+        GeometryReader{ geometry in
+            VStack{
+                HStack{
+                    SquareButton(label: "", icon: "back", action: {
+                        (str: String) in
+                        self.request_subscriber("back", [])
+                    }, style: .circle)
+                    .containerRelativeFrame(.horizontal, count: 4, span: 1, spacing: 0.1)
+                    Spacer()
+                    // if feature_type == ... then show special tools
+                }
+                TextEditor(text: $notes)
+                    .frame(width: geometry.size.width * 0.96, height: geometry.size.height * 0.5)
+                    .font(.system(size: geometry.size.height * 0.05))
+                    .cornerRadius(geometry.size.height * 0.05)
+                HStack{
+                    SquareButton(label: "", icon: "refresh", action: {(str: String) in }, style: .circle)
+                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                    SquareButton(label: "", icon: "undo", action: {(str: String) in }, style: .circle)
+                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                    SquareButton(label: "", icon: "redo", action: {(str: String) in }, style: .circle)
+                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                    Spacer()
+                        .containerRelativeFrame(.horizontal, count: 13, span: 6, spacing: 0.1)
+                    SquareButton(label: "apply", icon: "", action: {(str: String) in }, style: .tablet_accent)
+                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                }
             }
         }
     }
