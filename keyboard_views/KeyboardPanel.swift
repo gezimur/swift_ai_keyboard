@@ -28,35 +28,38 @@ struct KeyboardPanel: View {
             ]]
 
     var body: some View {
-        VStack{
-            ButtonsRow(items: self.central_rows_info[self.current_mode]![0], subscriber: self.procKey)
-            ButtonsRow(items: self.central_rows_info[self.current_mode]![1], subscriber: self.procKey)
+        GeometryReader { geometry in
+            let button_width = geometry.size.width / 10
             
-            HStack {
-                let items_count = self.central_rows_info[self.current_mode]![2].count + 3
+            VStack{
+    //             + 3
+                ButtonsRow(items: self.central_rows_info[self.current_mode]![0], subscriber: self.procKey)
+                ButtonsRow(items: self.central_rows_info[self.current_mode]![1], subscriber: self.procKey)
                 
-                SquareButton(label: self.shift_button_info[self.current_mode]!, icon:"", action: self.procShift)
-                    .containerRelativeFrame(.horizontal, count: items_count, span: 1, spacing: 0.1)
-                ButtonsRow(items: self.central_rows_info[self.current_mode]![2], subscriber: self.procKey)
-                    .containerRelativeFrame(.horizontal, count: items_count, span: items_count - 3, spacing: 0.1)
-                SquareButton(label: "Backspace", icon:"", action: self.procBackspace)
-                    .containerRelativeFrame(.horizontal, count: items_count, span: 1, spacing: 0.1)
-            }
-            
-            HStack {
-                SquareButton(label: self.mode_switch_button_info[self.current_mode]!, icon:"", action: {
-                    (str : String) in
-                    self.procModeSwitch(key: str)
-                })
-                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
-                SquareButton(label: "", icon:"lang", action: {(str: String) in })
-                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
-                SquareButton(label: "", icon:"", action: self.procKey)
-                    .containerRelativeFrame(.horizontal, count: 10, span: 6, spacing: 0.1)
-                SquareButton(label: "Enter", icon:"", action: self.procEnter, style: .square_accent)
-                    .containerRelativeFrame(.horizontal, count: 10, span: 1, spacing: 0.1)
+                HStack {
+                    let items_count = Double(self.central_rows_info[self.current_mode]![2].count)
+                    
+                    SquareButton(label: self.shift_button_info[self.current_mode]!, icon:"", action: self.procShift)
+                    ButtonsRow(items: self.central_rows_info[self.current_mode]![2], subscriber: self.procKey)
+                        .frame(width: items_count * button_width)
+                    SquareButton(label: "Backspace", icon:"", action: self.procBackspace)
+                }
+                
+                HStack {
+                    SquareButton(label: self.mode_switch_button_info[self.current_mode]!, icon:"", action: {
+                        (str : String) in
+                        self.procModeSwitch(key: str)
+                    })
+                        .frame(width: 1.5 * button_width)
+                    SquareButton(label: "", icon:"lang", action: {(str: String) in })
+                        .frame(width: button_width)
+                    SquareButton(label: " ", icon:"", action: self.procKey)
+                    SquareButton(label: "Enter", icon:"", action: self.procEnter, style: .square_accent)
+                        .frame(width: 1.5 * button_width)
+                }
             }
         }
+        
     }
     
     func procKey(key: String) {

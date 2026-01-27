@@ -5,20 +5,24 @@ struct SuggestionsPanel: View {
     @State private var suggestions: [String] = []
 
     var body: some View {
-        HStack{
-            SquareButton(label: "L", icon: "", action: {
-                (str: String) in
-                self.request_subscriber("state", ["keys + features"])
-            }, style: .square_accent)
-            .containerRelativeFrame(.horizontal, count: 7, span: 1, spacing: 0.1)
-            Spacer()
+        GeometryReader { geometry in
+            let button_width = 0.95 * geometry.size.width / 9
+            
             HStack{
-                ForEach(suggestions, id: \.self){
-                    suggestion in SquareButton(label: suggestion, icon: "", action: {
-                        (str: String) in
-                        self.request_subscriber("key", [suggestion + " "])
-                    }, style: .flat)
-                    .containerRelativeFrame(.horizontal, count: 3, span: 1, spacing: 0.1)
+                SquareButton(label: "L", icon: "", action: {
+                    (str: String) in
+                    self.request_subscriber("state", ["keys + features"])
+                }, style: .square_accent)
+                .frame(width: button_width)
+                Spacer()
+                HStack{
+                    ForEach(suggestions, id: \.self){
+                        suggestion in SquareButton(label: suggestion, icon: "", action: {
+                            (str: String) in
+                            self.request_subscriber("key", [suggestion + " "])
+                        }, style: .flat)
+                        .frame(width: button_width * 2)
+                    }
                 }
             }
         }

@@ -41,6 +41,7 @@
 		B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4822F001F1100996B80 /* ButtonsGrid.swift */; };
 		B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A12F001F1100996B80 /* KeyboardPanel.swift */; };
 		B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */; };
+		B2D616732F2944CF000950D3 /* TranslateSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		B231F4A12F001F1100996B80 /* KeyboardPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPanel.swift; sourceTree = "<group>"; };
 		B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniFeaturesPanel.swift; sourceTree = "<group>"; };
 		B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPanel.swift; sourceTree = "<group>"; };
+		B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateSettingsPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -166,6 +168,7 @@
 			children = (
 				B231F49E2F001F1100996B80 /* FeaturesPanel.swift */,
 				B231F49F2F001F1100996B80 /* FeatureTool.swift */,
+				B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */,
 				B231F4A02F001F1100996B80 /* InputTool.swift */,
 				B231F4A12F001F1100996B80 /* KeyboardPanel.swift */,
 				B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */,
@@ -277,6 +280,7 @@
 				B231F4BE2F001F1100996B80 /* FeatureTool.swift in Sources */,
 				B231F4BF2F001F1100996B80 /* SuggestionsPanel.swift in Sources */,
 				B231F4C02F001F1100996B80 /* FeaturesPanel.swift in Sources */,
+				B2D616732F2944CF000950D3 /* TranslateSettingsPanel.swift in Sources */,
 				B231F4C12F001F1100996B80 /* SquareButton.swift in Sources */,
 				B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */,
 				B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */,

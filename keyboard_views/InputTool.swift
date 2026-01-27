@@ -7,32 +7,39 @@ struct InputTool: View {
     
     var body: some View {
         GeometryReader{ geometry in
+            let button_size = 0.95 * geometry.size.height / 9
+            
             VStack{
                 HStack{
                     SquareButton(label: "", icon: "back", action: {
                         (str: String) in
                         self.request_subscriber("back", [])
                     }, style: .circle)
-                    .containerRelativeFrame(.horizontal, count: 4, span: 1, spacing: 0.1)
+                    .frame(width: button_size)
+                    if feature_type == "translate" {
+                        Text("Super feature")
+                    } else {
+                        Text(feature_type.capitalized)
+                    }
                     Spacer()
-                    // if feature_type == ... then show special tools
                 }
+                .frame(height: button_size)
                 TextEditor(text: $notes)
-                    .frame(width: geometry.size.width * 0.96, height: geometry.size.height * 0.5)
+                    .frame(width: geometry.size.width * 0.96)
                     .font(.system(size: geometry.size.height * 0.05))
                     .cornerRadius(geometry.size.height * 0.05)
                 HStack{
                     SquareButton(label: "", icon: "refresh", action: {(str: String) in }, style: .circle)
-                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                        .frame(width: button_size)
                     SquareButton(label: "", icon: "undo", action: {(str: String) in }, style: .circle)
-                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                        .frame(width: button_size)
                     SquareButton(label: "", icon: "redo", action: {(str: String) in }, style: .circle)
-                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                        .frame(width: button_size)
                     Spacer()
-                        .containerRelativeFrame(.horizontal, count: 13, span: 6, spacing: 0.1)
                     SquareButton(label: "apply", icon: "", action: {(str: String) in }, style: .tablet_accent)
-                        .containerRelativeFrame(.horizontal, count: 12, span: 1, spacing: 0.1)
+                        .frame(width: button_size * 2.5)
                 }
+                .frame(height: button_size)
             }
         }
     }

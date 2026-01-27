@@ -10,38 +10,45 @@ struct ContentView: View {
     @State private var prev_state: [StateParams] = [StateParams(state: "keys + suggestions", args: [])]
 
     var body: some View {
-        GeometryReader { proxy in
+        GeometryReader { geometry in
+            let comfort_width = geometry.size.width * 0.98
+            let comfort_height = geometry.size.height * 0.9
+            
             if self.current_state.state == "keys + suggestions" {
                 VStack{
+                    Spacer()
                     SuggestionsPanel(request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 5, span: 1, spacing: 0.1)
+                        .frame(width: comfort_width, height: comfort_height / 2 / 5)
                     KeyboardPanel(request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 5, span: 4, spacing: 0.1)
+                        .frame(width: comfort_width, height: comfort_height / 2)
                 }
-//                .frame(width: proxy.size.width, height: proxy.size.height)
                 
             } else if self.current_state.state == "keys + features" {
                 VStack{
+                    Spacer()
                     MiniFeaturesPanel(request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 5, span: 1, spacing: 0.1)
+                        .frame(width: comfort_width, height: comfort_height / 2 / 5)
                     KeyboardPanel(request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 5, span: 4, spacing: 0.1)
+                        .frame(width: comfort_width, height: comfort_height / 2)
                 }
-//                .frame(width: proxy.size.width, height: proxy.size.height)
             } else if self.current_state.state == "features" {
-                FeaturesPanel(request_subscriber: self.procRequest)
-//                    .frame(width: proxy.size.width, height: proxy.size.height)
+                VStack{
+                    Spacer()
+                    FeaturesPanel(request_subscriber: self.procRequest)
+                        .frame(width: comfort_width, height: comfort_height / 2)
+                }
             } else if self.current_state.state == "keys + input tool" {
                 VStack{
                     InputTool(feature_type: self.current_state.args[0], request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 2, span: 1, spacing: 0.1)
+                        .frame(width: comfort_width, height: geometry.size.height / 2)
+                    Spacer()
                     KeyboardPanel(request_subscriber: self.procRequest)
-                        .containerRelativeFrame(.vertical, count: 2, span: 1, spacing: 0.1)
+                        .frame(width: comfort_width, height: comfort_height / 2)
                 }
-//                .frame(width: proxy.size.width, height: proxy.size.height)
             } else if self.current_state.state == "feature tool" {
+                Spacer()
                 FeatureTool(args: self.current_state.args, request_subscriber: self.procRequest)
-//                    .frame(width: proxy.size.width, height: proxy.size.height)
+                    .frame(width: comfort_width, height: comfort_height / 2)
             }
         }
         
