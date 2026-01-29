@@ -1,7 +1,38 @@
 import SwiftUI
 
+struct TranslateSettingsButton: View{
+    @State var language_from = "Auto"
+    @State var language_to = "English"
+    var request_subscriber: (String, [String]) -> Void
+    
+    var body: some View {
+        GeometryReader{ geometry in
+            HStack{
+                SquareButton(label: language_from, icon: "", action: {
+                    (str: String) in
+                    request_subscriber("state", ["translate settings", language_from, language_to])
+                }, style: .tablet)
+                .frame(width: geometry.size.width * 0.4)
+                
+                SquareButton(label: "", icon: "swap", action: {
+                    (str: String) in
+                    swap(&self.language_from, &self.language_to)
+                }, style: .circle)
+                .frame(width: geometry.size.width * 0.2)
+                
+                SquareButton(label: language_to, icon: "", action: {
+                    (str: String) in
+                    request_subscriber("state", ["translate settings", language_from, language_to])
+                }, style: .tablet)
+                .frame(width: geometry.size.width * 0.4)
+            }
+        }
+    }
+}
+
 struct InputTool: View {
     var feature_type: String
+    var feature_args: [String]
     var request_subscriber: (String, [String]) -> Void
     @State private var notes: String = ""
     
@@ -16,10 +47,16 @@ struct InputTool: View {
                         self.request_subscriber("back", [])
                     }, style: .circle)
                     .frame(width: button_size)
-                    if feature_type == "translate" {
-                        Text("Super feature")
+                    if self.feature_type == "translate" {
+                        if self.feature_args.count < 2 {
+                            TranslateSettingsButton(request_subscriber: self.request_subscriber)
+                        } else {
+                            TranslateSettingsButton(language_from: feature_args[0],
+                                                    language_to: feature_args[1],
+                                                    request_subscriber: self.request_subscriber)
+                        }
                     } else {
-                        Text(feature_type.capitalized)
+                        Text(self.feature_type.capitalized)
                     }
                     Spacer()
                 }

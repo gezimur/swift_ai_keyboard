@@ -39,16 +39,22 @@ struct ContentView: View {
                 }
             } else if self.current_state.state == "keys + input tool" {
                 VStack{
-                    InputTool(feature_type: self.current_state.args[0], request_subscriber: self.procRequest)
+                    InputTool(feature_type: self.current_state.args[0],
+                              feature_args: Array(self.current_state.args[1..<self.current_state.args.count]),
+                              request_subscriber: self.procRequest)
                         .frame(width: comfort_width, height: geometry.size.height / 2)
                     Spacer()
                     KeyboardPanel(request_subscriber: self.procRequest)
                         .frame(width: comfort_width, height: comfort_height / 2)
                 }
-            } else if self.current_state.state == "feature tool" {
-                Spacer()
-                FeatureTool(args: self.current_state.args, request_subscriber: self.procRequest)
-                    .frame(width: comfort_width, height: comfort_height / 2)
+            } else if self.current_state.state == "translate settings" {
+                VStack {
+                    Spacer()
+                    TranslateSettingsPanel(language_from: self.current_state.args[0],
+                                           language_to: self.current_state.args[1],
+                                           request_subscriber: self.procRequest)
+                        .frame(width: comfort_width, height: comfort_height / 2)
+                }
             }
         }
         
