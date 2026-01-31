@@ -1,13 +1,62 @@
 import SwiftUI
 
-struct StateParams {
+// copy from https://github.com/0Itsuki0/SwiftCustomKeyboard/blob/main/HelloKeyboardDemo/AppSpecificKeyboardDemo.swift
+//class AIKeyboardView: UIInputViewController{
+//    override func viewDidLoad() {
+//            super.viewDidLoad()
+//                    
+//            let animalKeyboardViewController = UIHostingController(
+//                rootView: AIKeyboardContentView(
+//                    insertText: { [weak self] text in
+//                        guard let self else { return }
+//                        self.textDocumentProxy.insertText(text)
+//
+//                    },
+//                    deleteText: { [weak self] in
+//                        guard let self,
+//                              self.textDocumentProxy.hasText else { return }
+//
+//                        self.textDocumentProxy.deleteBackward()
+//                    },
+////                    needsInputModeSwitchKey: self.needsInputModeSwitchKey,
+////    //                needsInputModeSwitchKey: true,
+////                    nextKeyboardAction: #selector(self.handleInputModeList(from:with:)),
+//                ))
+//            
+//            let animalKeyboardView = animalKeyboardViewController.view!
+//            animalKeyboardView.translatesAutoresizingMaskIntoConstraints = false
+//            
+//            // default to white
+//            animalKeyboardViewController.view.backgroundColor = .clear
+//
+//            
+//            self.addChild(animalKeyboardViewController)
+//            self.view.addSubview(animalKeyboardView)
+//            animalKeyboardViewController.didMove(toParent: self)
+//
+//            NSLayoutConstraint.activate([
+//                animalKeyboardView.leftAnchor.constraint(equalTo: view.leftAnchor),
+//                animalKeyboardView.topAnchor.constraint(equalTo: view.topAnchor),
+//                animalKeyboardView.rightAnchor.constraint(equalTo: view.rightAnchor),
+//                animalKeyboardView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//            ])
+//        }
+//}
+
+
+fileprivate struct StateParams {
     var state: String
     var args: [String]
 }
 
-struct ContentView: View {
+struct AIKeyboardContentView: View {
+    var insertText: (String) -> Void
+    var deleteText: () -> Void
+    
     @State private var current_state: StateParams = StateParams(state: "keys + suggestions", args: [])
     @State private var prev_state: [StateParams] = [StateParams(state: "keys + suggestions", args: [])]
+    
+//    var textDocumentProxy : any UITextDocumentProxy {get}
 
     var body: some View {
         GeometryReader { geometry in
@@ -72,10 +121,12 @@ struct ContentView: View {
             self.prev_state.append(self.current_state)
             self.current_state = StateParams(state: args[0], args: Array(args[1..<args.count]))
         } else if request == "feature" {
-//            let myurl = URL(string: "")!
-//            var url_request = URLRequest(url: myurl)
-//            NSURLSession.dataTaskWithRequest()
-//            }
+            //            let myurl = URL(string: "")!
+            //            var url_request = URLRequest(url: myurl)
+            //            NSURLSession.dataTaskWithRequest()
+            //            }
+        } else if request == "key" {
+            self.insertText(args[0])
         } else {
             print("Processing request: \(request) with args: \(args)")
         }
@@ -83,3 +134,6 @@ struct ContentView: View {
 }
 
 
+#Preview {
+    AIKeyboardContentView(insertText: {_ in}, deleteText: {})
+}
