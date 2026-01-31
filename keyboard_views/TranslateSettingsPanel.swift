@@ -76,7 +76,7 @@ struct TranslateSettingsPanel: View {
                         (str: String) in
                         self.request_subscriber("back", [])
                     }, style: .circle)
-                    .frame(height: geometry.size.height * 0.100) // 1/8
+                    .frame(width: geometry.size.width * 0.125, height: geometry.size.height * 0.125) // 1/8
                     
                     Spacer()
                 }
@@ -91,6 +91,8 @@ struct TranslateSettingsPanel: View {
                     VStack{
                         Spacer().frame(height: geometry.size.height * 0.375) // 3/8
                         Image("right-arrow")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                             .frame(width: geometry.size.width * 0.1) // (1/5, 6/8)
                         Spacer()
                         SquareButton(label: "Apply", icon: "", action: {

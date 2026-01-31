@@ -38,7 +38,7 @@ struct InputTool: View {
     
     var body: some View {
         GeometryReader{ geometry in
-            let button_size = 0.95 * geometry.size.height / 9
+            let button_size = 0.95 * geometry.size.height / 7
             
             VStack{
                 HStack{

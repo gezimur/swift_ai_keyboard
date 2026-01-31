@@ -195,11 +195,15 @@ struct SquareButton: View {
             self.style == ButtonStyle.square_accent ||
             self.style == ButtonStyle.circle {
             Image(icon)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: key_size * 0.7, height: key_size * 0.7)
                 .background(Color.gray.opacity(0.0))
         } else if self.style == ButtonStyle.tablet{
             Image(icon)
-                .frame(width: key_size * 0.7, height: key_size * 0.7)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: key_size * 0.9, height: key_size * 0.9)
                 .background(LinearGradient(colors: [Color.blue, Color.green],
                                            startPoint: .topLeading,
                                            endPoint: .bottomTrailing),
@@ -207,8 +211,10 @@ struct SquareButton: View {
         } else if self.style ==  ButtonStyle.tablet_accent ||
                     self.style ==  ButtonStyle.flat {
                 Image(icon)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
                     .frame(width: key_size * 0.7, height: key_size * 0.7)
-                    .background(Color.gray.opacity(0.0))
+                    .background(.clear)
             }
     }
     
@@ -218,8 +224,8 @@ struct SquareButton: View {
             
         Text(self.label)
             .foregroundColor(.white)
-            .font(.system(size: key_size * 0.3))
+            .font(.system(size: key_size * 0.6))
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.gray.opacity(0.0))
+            .background(.clear)
     }
 }
