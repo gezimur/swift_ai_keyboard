@@ -50,8 +50,9 @@ fileprivate struct StateParams {
 }
 
 struct AIKeyboardContentView: View {
-    var insertText: (String) -> Void
-    var deleteText: () -> Void
+    var insert_text: (String) -> Void
+    var delete_text: () -> Void
+    @ObservedObject var text_manager = TextManager()
     
     @State private var current_state: StateParams = StateParams(state: "keys + suggestions", args: [])
     @State private var prev_state: [StateParams] = [StateParams(state: "keys + suggestions", args: [])]
@@ -90,7 +91,8 @@ struct AIKeyboardContentView: View {
                 VStack{
                     InputTool(feature_type: self.current_state.args[0],
                               feature_args: Array(self.current_state.args[1..<self.current_state.args.count]),
-                              request_subscriber: self.procRequest)
+                              request_subscriber: self.procRequest,
+                              notes: $text_manager.used_text)
                         .frame(width: comfort_width, height: geometry.size.height / 2)
                     Spacer()
                     KeyboardPanel(request_subscriber: self.procRequest)
@@ -121,12 +123,9 @@ struct AIKeyboardContentView: View {
             self.prev_state.append(self.current_state)
             self.current_state = StateParams(state: args[0], args: Array(args[1..<args.count]))
         } else if request == "feature" {
-            //            let myurl = URL(string: "")!
-            //            var url_request = URLRequest(url: myurl)
-            //            NSURLSession.dataTaskWithRequest()
-            //            }
+            self.text_manager.askChatGpt(request: "Hello! I'm Gena")
         } else if request == "key" {
-            self.insertText(args[0])
+            self.insert_text(args[0])
         } else {
             print("Processing request: \(request) with args: \(args)")
         }
@@ -135,5 +134,5 @@ struct AIKeyboardContentView: View {
 
 
 #Preview {
-    AIKeyboardContentView(insertText: {_ in}, deleteText: {})
+    AIKeyboardContentView(insert_text: {_ in}, delete_text: {})
 }

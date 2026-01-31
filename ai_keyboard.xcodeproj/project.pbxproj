@@ -89,6 +89,11 @@
 			path = ai_keyboard;
 			sourceTree = "<group>";
 		};
+		B2D616762F2DD30D000950D3 /* keyboard_logic */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = keyboard_logic;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +113,7 @@
 				B231F45A2EF83EF200996B80 /* ai_keyboard */,
 				B231F4592EF83EF200996B80 /* Products */,
 				B231F4672EF83F1600996B80 /* ContentView.swift */,
+				B2D616762F2DD30D000950D3 /* keyboard_logic */,
 				B231F4682EF83F1600996B80 /* KeyboardApp.swift */,
 				B231F4842F001F1100996B80 /* aux_view */,
 				B231F49D2F001F1100996B80 /* icons */,
@@ -194,6 +200,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B231F45A2EF83EF200996B80 /* ai_keyboard */,
+				B2D616762F2DD30D000950D3 /* keyboard_logic */,
 			);
 			name = ai_keyboard;
 			packageProductDependencies = (
@@ -227,6 +234,8 @@
 			);
 			mainGroup = B231F44F2EF83EF200996B80;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B231F4592EF83EF200996B80 /* Products */;
 			projectDirPath = "";
@@ -416,7 +425,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -460,7 +479,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_APP_SANDBOX = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

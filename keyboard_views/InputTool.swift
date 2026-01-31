@@ -34,7 +34,8 @@ struct InputTool: View {
     var feature_type: String
     var feature_args: [String]
     var request_subscriber: (String, [String]) -> Void
-    @State private var notes: String = ""
+
+    public var notes: Binding<String>
     
     var body: some View {
         GeometryReader{ geometry in
@@ -61,7 +62,7 @@ struct InputTool: View {
                     Spacer()
                 }
                 .frame(height: button_size)
-                TextEditor(text: $notes)
+                TextEditor(text: notes)
                     .frame(width: geometry.size.width * 0.96)
                     .font(.system(size: geometry.size.height * 0.05))
                     .cornerRadius(geometry.size.height * 0.05)
@@ -73,7 +74,10 @@ struct InputTool: View {
                     SquareButton(label: "", icon: "redo", action: {(str: String) in }, style: .circle)
                         .frame(width: button_size)
                     Spacer()
-                    SquareButton(label: "apply", icon: "", action: {(str: String) in }, style: .tablet_accent)
+                    SquareButton(label: "apply", icon: "", action: {
+                        (str: String) in
+                        self.request_subscriber("feature", [self.feature_type, notes.wrappedValue])
+                    }, style: .tablet_accent)
                         .frame(width: button_size * 2.5)
                 }
                 .frame(height: button_size)

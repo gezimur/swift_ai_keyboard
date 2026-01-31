@@ -8,7 +8,7 @@ struct ButtonGridApp: App {
         
             WindowGroup {
                 GeometryReader { geometry in
-                    AIKeyboardContentView(insertText: {(String)in }, deleteText: {})
+                    AIKeyboardContentView(insert_text: {(String)in }, delete_text: {})
                         .frame(width: geometry.size.width, height: geometry.size.height)
                 }
                 

@@ -93,7 +93,7 @@ struct TranslateSettingsPanel: View {
                         Image("right-arrow")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .frame(width: geometry.size.width * 0.1) // (1/5, 6/8)
+                            .frame(height: geometry.size.height * 0.075) // (1/5, 6/8)
                         Spacer()
                         SquareButton(label: "Apply", icon: "", action: {
                             (str: String) in
