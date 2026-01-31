@@ -5,11 +5,23 @@ struct ChatGPTResponce: Decodable {
 }
 
 class ChatGPTConnector {
-    private let api_key = ""
+    private let api_key : String
     private let api_url = "https://api.openai.com/v1/chat/completions"
     
     var subscriber: (String) -> Void = {String in}
 
+    init(){
+        do {
+            let location = "/Users/gena/Downloads/gpt_key.txt"
+            let optional_key = try NSString(contentsOfFile: location, encoding: NSUTF8StringEncoding) as String
+            api_key = String(optional_key.prefix(optional_key.count - 1))
+        } catch let error {
+            print(error.localizedDescription)
+            api_key = ""
+        }
+        print(api_key)
+    }
+    
     func subscribeOnAnswer(subscriber: @escaping (String) -> Void) {
         self.subscriber = subscriber
     }
