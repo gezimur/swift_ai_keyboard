@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B231F46C2EF83F1600996B80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4672EF83F1600996B80 /* ContentView.swift */; };
-		B231F46D2EF83F1600996B80 /* KeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4682EF83F1600996B80 /* KeyboardApp.swift */; };
+		B231F46C2EF83F1600996B80 /* AiKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */; };
+		B231F46D2EF83F1600996B80 /* DemoAiKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */; };
 		B231F4A52F001F1100996B80 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48A2F001F1100996B80 /* emoji.png */; };
 		B231F4A62F001F1100996B80 /* format.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48D2F001F1100996B80 /* format.png */; };
 		B231F4A72F001F1100996B80 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4922F001F1100996B80 /* redo.png */; };
@@ -42,12 +42,13 @@
 		B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A12F001F1100996B80 /* KeyboardPanel.swift */; };
 		B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */; };
 		B2D616732F2944CF000950D3 /* TranslateSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */; };
+		B2D616812F2E4FA1000950D3 /* AiKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B231F4582EF83EF200996B80 /* ai_keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ai_keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B231F4672EF83F1600996B80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B231F4682EF83F1600996B80 /* KeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardApp.swift; sourceTree = "<group>"; };
+		B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiKeyboardViewController.swift; sourceTree = "<group>"; };
+		B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAiKeyboardApp.swift; sourceTree = "<group>"; };
 		B231F4822F001F1100996B80 /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
 		B231F4832F001F1100996B80 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
 		B231F4852F001F1100996B80 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -81,6 +82,7 @@
 		B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniFeaturesPanel.swift; sourceTree = "<group>"; };
 		B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPanel.swift; sourceTree = "<group>"; };
 		B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateSettingsPanel.swift; sourceTree = "<group>"; };
+		B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiKeyboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,9 +91,9 @@
 			path = ai_keyboard;
 			sourceTree = "<group>";
 		};
-		B2D616762F2DD30D000950D3 /* keyboard_logic */ = {
+		B2D616762F2DD30D000950D3 /* features_logic */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = keyboard_logic;
+			path = features_logic;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -112,9 +114,9 @@
 			children = (
 				B231F45A2EF83EF200996B80 /* ai_keyboard */,
 				B231F4592EF83EF200996B80 /* Products */,
-				B231F4672EF83F1600996B80 /* ContentView.swift */,
-				B2D616762F2DD30D000950D3 /* keyboard_logic */,
-				B231F4682EF83F1600996B80 /* KeyboardApp.swift */,
+				B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */,
+				B2D616762F2DD30D000950D3 /* features_logic */,
+				B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */,
 				B231F4842F001F1100996B80 /* aux_view */,
 				B231F49D2F001F1100996B80 /* icons */,
 				B231F4A42F001F1100996B80 /* keyboard_views */,
@@ -172,6 +174,7 @@
 		B231F4A42F001F1100996B80 /* keyboard_views */ = {
 			isa = PBXGroup;
 			children = (
+				B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */,
 				B231F49E2F001F1100996B80 /* FeaturesPanel.swift */,
 				B231F49F2F001F1100996B80 /* FeatureTool.swift */,
 				B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */,
@@ -200,7 +203,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				B231F45A2EF83EF200996B80 /* ai_keyboard */,
-				B2D616762F2DD30D000950D3 /* keyboard_logic */,
+				B2D616762F2DD30D000950D3 /* features_logic */,
 			);
 			name = ai_keyboard;
 			packageProductDependencies = (
@@ -294,8 +297,9 @@
 				B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */,
 				B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */,
 				B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */,
-				B231F46C2EF83F1600996B80 /* ContentView.swift in Sources */,
-				B231F46D2EF83F1600996B80 /* KeyboardApp.swift in Sources */,
+				B2D616812F2E4FA1000950D3 /* AiKeyboardView.swift in Sources */,
+				B231F46C2EF83F1600996B80 /* AiKeyboardViewController.swift in Sources */,
+				B231F46D2EF83F1600996B80 /* DemoAiKeyboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

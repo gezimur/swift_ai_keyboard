@@ -67,11 +67,20 @@ struct InputTool: View {
                     .font(.system(size: geometry.size.height * 0.05))
                     .cornerRadius(geometry.size.height * 0.05)
                 HStack{
-                    SquareButton(label: "", icon: "refresh", action: {(str: String) in }, style: .circle)
+                    SquareButton(label: "", icon: "refresh", action: {
+                        (str: String) in
+                        self.request_subscriber("feature", [self.feature_type, notes.wrappedValue])
+                    }, style: .circle)
                         .frame(width: button_size)
-                    SquareButton(label: "", icon: "undo", action: {(str: String) in }, style: .circle)
+                    SquareButton(label: "", icon: "undo", action: {
+                        (str: String) in
+                        self.request_subscriber("undo", [notes.wrappedValue])
+                    }, style: .circle)
                         .frame(width: button_size)
-                    SquareButton(label: "", icon: "redo", action: {(str: String) in }, style: .circle)
+                    SquareButton(label: "", icon: "redo", action: {
+                        (str: String) in
+                        self.request_subscriber("redo", [notes.wrappedValue])
+                    }, style: .circle)
                         .frame(width: button_size)
                     Spacer()
                     SquareButton(label: "apply", icon: "", action: {

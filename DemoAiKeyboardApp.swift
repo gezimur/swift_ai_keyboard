@@ -1,11 +1,8 @@
 import SwiftUI
 
-import SwiftUI
-
 @main
 struct ButtonGridApp: App {
     var body: some Scene {
-        
             WindowGroup {
                 GeometryReader { geometry in
                     AIKeyboardContentView(insert_text: {(String)in }, delete_text: {})
