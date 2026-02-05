@@ -7,99 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B231F46C2EF83F1600996B80 /* AiKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */; };
-		B231F46D2EF83F1600996B80 /* DemoAiKeyboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */; };
-		B231F4A52F001F1100996B80 /* emoji.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48A2F001F1100996B80 /* emoji.png */; };
-		B231F4A62F001F1100996B80 /* format.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48D2F001F1100996B80 /* format.png */; };
-		B231F4A72F001F1100996B80 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4922F001F1100996B80 /* redo.png */; };
-		B231F4A82F001F1100996B80 /* compress.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4872F001F1100996B80 /* compress.png */; };
-		B231F4A92F001F1100996B80 /* expand.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48C2F001F1100996B80 /* expand.png */; };
-		B231F4AA2F001F1100996B80 /* scan.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4962F001F1100996B80 /* scan.png */; };
-		B231F4AB2F001F1100996B80 /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48E2F001F1100996B80 /* goal.png */; };
-		B231F4AC2F001F1100996B80 /* paraphrase.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4912F001F1100996B80 /* paraphrase.png */; };
-		B231F4AD2F001F1100996B80 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4862F001F1100996B80 /* close.png */; };
-		B231F4AE2F001F1100996B80 /* tone.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49A2F001F1100996B80 /* tone.png */; };
-		B231F4AF2F001F1100996B80 /* translate.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49B2F001F1100996B80 /* translate.png */; };
-		B231F4B02F001F1100996B80 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4902F001F1100996B80 /* more.png */; };
-		B231F4B12F001F1100996B80 /* swap.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4992F001F1100996B80 /* swap.png */; };
-		B231F4B22F001F1100996B80 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4882F001F1100996B80 /* correct.png */; };
-		B231F4B32F001F1100996B80 /* right-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4952F001F1100996B80 /* right-arrow.png */; };
-		B231F4B42F001F1100996B80 /* del.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4892F001F1100996B80 /* del.png */; };
-		B231F4B52F001F1100996B80 /* enter.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48B2F001F1100996B80 /* enter.png */; };
-		B231F4B62F001F1100996B80 /* lang.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F48F2F001F1100996B80 /* lang.png */; };
-		B231F4B72F001F1100996B80 /* shift.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4982F001F1100996B80 /* shift.png */; };
-		B231F4B82F001F1100996B80 /* undo.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F49C2F001F1100996B80 /* undo.png */; };
-		B231F4B92F001F1100996B80 /* reply.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4942F001F1100996B80 /* reply.png */; };
-		B231F4BA2F001F1100996B80 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4972F001F1100996B80 /* settings.png */; };
-		B231F4BB2F001F1100996B80 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4852F001F1100996B80 /* back.png */; };
-		B231F4BC2F001F1100996B80 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = B231F4932F001F1100996B80 /* refresh.png */; };
-		B231F4BD2F001F1100996B80 /* InputTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A02F001F1100996B80 /* InputTool.swift */; };
-		B231F4BE2F001F1100996B80 /* FeatureTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F49F2F001F1100996B80 /* FeatureTool.swift */; };
-		B231F4BF2F001F1100996B80 /* SuggestionsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */; };
-		B231F4C02F001F1100996B80 /* FeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F49E2F001F1100996B80 /* FeaturesPanel.swift */; };
-		B231F4C12F001F1100996B80 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4832F001F1100996B80 /* SquareButton.swift */; };
-		B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4822F001F1100996B80 /* ButtonsGrid.swift */; };
-		B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A12F001F1100996B80 /* KeyboardPanel.swift */; };
-		B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */; };
-		B2D616732F2944CF000950D3 /* TranslateSettingsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */; };
-		B2D616812F2E4FA1000950D3 /* AiKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */; };
+		B275B90F2F379B30007EEC1B /* ai_keyboard_deploy.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B275B9082F379B30007EEC1B /* ai_keyboard_deploy.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B275B90D2F379B30007EEC1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B275B8EE2F379B02007EEC1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B275B9072F379B30007EEC1B;
+			remoteInfo = ai_keyboard_deploy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B275B9142F379B30007EEC1B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B275B90F2F379B30007EEC1B /* ai_keyboard_deploy.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B231F4582EF83EF200996B80 /* ai_keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ai_keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiKeyboardViewController.swift; sourceTree = "<group>"; };
-		B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAiKeyboardApp.swift; sourceTree = "<group>"; };
-		B231F4822F001F1100996B80 /* ButtonsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGrid.swift; sourceTree = "<group>"; };
-		B231F4832F001F1100996B80 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
-		B231F4852F001F1100996B80 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		B231F4862F001F1100996B80 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
-		B231F4872F001F1100996B80 /* compress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compress.png; sourceTree = "<group>"; };
-		B231F4882F001F1100996B80 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
-		B231F4892F001F1100996B80 /* del.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = del.png; sourceTree = "<group>"; };
-		B231F48A2F001F1100996B80 /* emoji.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emoji.png; sourceTree = "<group>"; };
-		B231F48B2F001F1100996B80 /* enter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = enter.png; sourceTree = "<group>"; };
-		B231F48C2F001F1100996B80 /* expand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expand.png; sourceTree = "<group>"; };
-		B231F48D2F001F1100996B80 /* format.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = format.png; sourceTree = "<group>"; };
-		B231F48E2F001F1100996B80 /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
-		B231F48F2F001F1100996B80 /* lang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lang.png; sourceTree = "<group>"; };
-		B231F4902F001F1100996B80 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
-		B231F4912F001F1100996B80 /* paraphrase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paraphrase.png; sourceTree = "<group>"; };
-		B231F4922F001F1100996B80 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
-		B231F4932F001F1100996B80 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
-		B231F4942F001F1100996B80 /* reply.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reply.png; sourceTree = "<group>"; };
-		B231F4952F001F1100996B80 /* right-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right-arrow.png"; sourceTree = "<group>"; };
-		B231F4962F001F1100996B80 /* scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scan.png; sourceTree = "<group>"; };
-		B231F4972F001F1100996B80 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		B231F4982F001F1100996B80 /* shift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shift.png; sourceTree = "<group>"; };
-		B231F4992F001F1100996B80 /* swap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swap.png; sourceTree = "<group>"; };
-		B231F49A2F001F1100996B80 /* tone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tone.png; sourceTree = "<group>"; };
-		B231F49B2F001F1100996B80 /* translate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = translate.png; sourceTree = "<group>"; };
-		B231F49C2F001F1100996B80 /* undo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = undo.png; sourceTree = "<group>"; };
-		B231F49E2F001F1100996B80 /* FeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesPanel.swift; sourceTree = "<group>"; };
-		B231F49F2F001F1100996B80 /* FeatureTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureTool.swift; sourceTree = "<group>"; };
-		B231F4A02F001F1100996B80 /* InputTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTool.swift; sourceTree = "<group>"; };
-		B231F4A12F001F1100996B80 /* KeyboardPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardPanel.swift; sourceTree = "<group>"; };
-		B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniFeaturesPanel.swift; sourceTree = "<group>"; };
-		B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsPanel.swift; sourceTree = "<group>"; };
-		B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateSettingsPanel.swift; sourceTree = "<group>"; };
-		B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiKeyboardView.swift; sourceTree = "<group>"; };
+		B275B8F62F379B02007EEC1B /* ai_keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ai_keyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B275B9082F379B30007EEC1B /* ai_keyboard_deploy.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ai_keyboard_deploy.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B275B9102F379B30007EEC1B /* Exceptions for "ai_keyboard_deploy" folder in "ai_keyboard_deploy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B275B9072F379B30007EEC1B /* ai_keyboard_deploy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		B231F45A2EF83EF200996B80 /* ai_keyboard */ = {
+		B275B8F82F379B02007EEC1B /* ai_keyboard */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ai_keyboard;
 			sourceTree = "<group>";
 		};
-		B2D616762F2DD30D000950D3 /* features_logic */ = {
+		B275B9092F379B30007EEC1B /* ai_keyboard_deploy */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = features_logic;
+			exceptions = (
+				B275B9102F379B30007EEC1B /* Exceptions for "ai_keyboard_deploy" folder in "ai_keyboard_deploy" target */,
+			);
+			path = ai_keyboard_deploy;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B231F4552EF83EF200996B80 /* Frameworks */ = {
+		B275B8F32F379B02007EEC1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B275B9052F379B30007EEC1B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,204 +83,155 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B231F44F2EF83EF200996B80 = {
+		B275B8ED2F379B02007EEC1B = {
 			isa = PBXGroup;
 			children = (
-				B231F45A2EF83EF200996B80 /* ai_keyboard */,
-				B231F4592EF83EF200996B80 /* Products */,
-				B231F4672EF83F1600996B80 /* AiKeyboardViewController.swift */,
-				B2D616762F2DD30D000950D3 /* features_logic */,
-				B231F4682EF83F1600996B80 /* DemoAiKeyboardApp.swift */,
-				B231F4842F001F1100996B80 /* aux_view */,
-				B231F49D2F001F1100996B80 /* icons */,
-				B231F4A42F001F1100996B80 /* keyboard_views */,
+				B275B8F82F379B02007EEC1B /* ai_keyboard */,
+				B275B9092F379B30007EEC1B /* ai_keyboard_deploy */,
+				B275B8F72F379B02007EEC1B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B231F4592EF83EF200996B80 /* Products */ = {
+		B275B8F72F379B02007EEC1B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B231F4582EF83EF200996B80 /* ai_keyboard.app */,
+				B275B8F62F379B02007EEC1B /* ai_keyboard.app */,
+				B275B9082F379B30007EEC1B /* ai_keyboard_deploy.appex */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B231F4842F001F1100996B80 /* aux_view */ = {
-			isa = PBXGroup;
-			children = (
-				B231F4822F001F1100996B80 /* ButtonsGrid.swift */,
-				B231F4832F001F1100996B80 /* SquareButton.swift */,
-			);
-			path = aux_view;
-			sourceTree = "<group>";
-		};
-		B231F49D2F001F1100996B80 /* icons */ = {
-			isa = PBXGroup;
-			children = (
-				B231F4852F001F1100996B80 /* back.png */,
-				B231F4862F001F1100996B80 /* close.png */,
-				B231F4872F001F1100996B80 /* compress.png */,
-				B231F4882F001F1100996B80 /* correct.png */,
-				B231F4892F001F1100996B80 /* del.png */,
-				B231F48A2F001F1100996B80 /* emoji.png */,
-				B231F48B2F001F1100996B80 /* enter.png */,
-				B231F48C2F001F1100996B80 /* expand.png */,
-				B231F48D2F001F1100996B80 /* format.png */,
-				B231F48E2F001F1100996B80 /* goal.png */,
-				B231F48F2F001F1100996B80 /* lang.png */,
-				B231F4902F001F1100996B80 /* more.png */,
-				B231F4912F001F1100996B80 /* paraphrase.png */,
-				B231F4922F001F1100996B80 /* redo.png */,
-				B231F4932F001F1100996B80 /* refresh.png */,
-				B231F4942F001F1100996B80 /* reply.png */,
-				B231F4952F001F1100996B80 /* right-arrow.png */,
-				B231F4962F001F1100996B80 /* scan.png */,
-				B231F4972F001F1100996B80 /* settings.png */,
-				B231F4982F001F1100996B80 /* shift.png */,
-				B231F4992F001F1100996B80 /* swap.png */,
-				B231F49A2F001F1100996B80 /* tone.png */,
-				B231F49B2F001F1100996B80 /* translate.png */,
-				B231F49C2F001F1100996B80 /* undo.png */,
-			);
-			path = icons;
-			sourceTree = "<group>";
-		};
-		B231F4A42F001F1100996B80 /* keyboard_views */ = {
-			isa = PBXGroup;
-			children = (
-				B2D616802F2E4F92000950D3 /* AiKeyboardView.swift */,
-				B231F49E2F001F1100996B80 /* FeaturesPanel.swift */,
-				B231F49F2F001F1100996B80 /* FeatureTool.swift */,
-				B2D616722F2944AE000950D3 /* TranslateSettingsPanel.swift */,
-				B231F4A02F001F1100996B80 /* InputTool.swift */,
-				B231F4A12F001F1100996B80 /* KeyboardPanel.swift */,
-				B231F4A22F001F1100996B80 /* MiniFeaturesPanel.swift */,
-				B231F4A32F001F1100996B80 /* SuggestionsPanel.swift */,
-			);
-			path = keyboard_views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B231F4572EF83EF200996B80 /* ai_keyboard */ = {
+		B275B8F52F379B02007EEC1B /* ai_keyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B231F4632EF83EF200996B80 /* Build configuration list for PBXNativeTarget "ai_keyboard" */;
+			buildConfigurationList = B275B9012F379B03007EEC1B /* Build configuration list for PBXNativeTarget "ai_keyboard" */;
 			buildPhases = (
-				B231F4542EF83EF200996B80 /* Sources */,
-				B231F4552EF83EF200996B80 /* Frameworks */,
-				B231F4562EF83EF200996B80 /* Resources */,
+				B275B8F22F379B02007EEC1B /* Sources */,
+				B275B8F32F379B02007EEC1B /* Frameworks */,
+				B275B8F42F379B02007EEC1B /* Resources */,
+				B275B9142F379B30007EEC1B /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B275B90E2F379B30007EEC1B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				B275B8F82F379B02007EEC1B /* ai_keyboard */,
+			);
+			name = ai_keyboard;
+			packageProductDependencies = (
+			);
+			productName = ai_keyboard;
+			productReference = B275B8F62F379B02007EEC1B /* ai_keyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B275B9072F379B30007EEC1B /* ai_keyboard_deploy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B275B9112F379B30007EEC1B /* Build configuration list for PBXNativeTarget "ai_keyboard_deploy" */;
+			buildPhases = (
+				B275B9042F379B30007EEC1B /* Sources */,
+				B275B9052F379B30007EEC1B /* Frameworks */,
+				B275B9062F379B30007EEC1B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				B231F45A2EF83EF200996B80 /* ai_keyboard */,
-				B2D616762F2DD30D000950D3 /* features_logic */,
+				B275B9092F379B30007EEC1B /* ai_keyboard_deploy */,
 			);
-			name = ai_keyboard;
+			name = ai_keyboard_deploy;
 			packageProductDependencies = (
 			);
-			productName = ai_keyboard;
-			productReference = B231F4582EF83EF200996B80 /* ai_keyboard.app */;
-			productType = "com.apple.product-type.application";
+			productName = ai_keyboard_deploy;
+			productReference = B275B9082F379B30007EEC1B /* ai_keyboard_deploy.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B231F4502EF83EF200996B80 /* Project object */ = {
+		B275B8EE2F379B02007EEC1B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					B231F4572EF83EF200996B80 = {
+					B275B8F52F379B02007EEC1B = {
 						CreatedOnToolsVersion = 26.2;
-						LastSwiftMigration = 2620;
+					};
+					B275B9072F379B30007EEC1B = {
+						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = B231F4532EF83EF200996B80 /* Build configuration list for PBXProject "ai_keyboard" */;
+			buildConfigurationList = B275B8F12F379B02007EEC1B /* Build configuration list for PBXProject "ai_keyboard" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = B231F44F2EF83EF200996B80;
+			mainGroup = B275B8ED2F379B02007EEC1B;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = B231F4592EF83EF200996B80 /* Products */;
+			productRefGroup = B275B8F72F379B02007EEC1B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B231F4572EF83EF200996B80 /* ai_keyboard */,
+				B275B8F52F379B02007EEC1B /* ai_keyboard */,
+				B275B9072F379B30007EEC1B /* ai_keyboard_deploy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B231F4562EF83EF200996B80 /* Resources */ = {
+		B275B8F42F379B02007EEC1B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B231F4A52F001F1100996B80 /* emoji.png in Resources */,
-				B231F4A62F001F1100996B80 /* format.png in Resources */,
-				B231F4A72F001F1100996B80 /* redo.png in Resources */,
-				B231F4A82F001F1100996B80 /* compress.png in Resources */,
-				B231F4A92F001F1100996B80 /* expand.png in Resources */,
-				B231F4AA2F001F1100996B80 /* scan.png in Resources */,
-				B231F4AB2F001F1100996B80 /* goal.png in Resources */,
-				B231F4AC2F001F1100996B80 /* paraphrase.png in Resources */,
-				B231F4AD2F001F1100996B80 /* close.png in Resources */,
-				B231F4AE2F001F1100996B80 /* tone.png in Resources */,
-				B231F4AF2F001F1100996B80 /* translate.png in Resources */,
-				B231F4B02F001F1100996B80 /* more.png in Resources */,
-				B231F4B12F001F1100996B80 /* swap.png in Resources */,
-				B231F4B22F001F1100996B80 /* correct.png in Resources */,
-				B231F4B32F001F1100996B80 /* right-arrow.png in Resources */,
-				B231F4B42F001F1100996B80 /* del.png in Resources */,
-				B231F4B52F001F1100996B80 /* enter.png in Resources */,
-				B231F4B62F001F1100996B80 /* lang.png in Resources */,
-				B231F4B72F001F1100996B80 /* shift.png in Resources */,
-				B231F4B82F001F1100996B80 /* undo.png in Resources */,
-				B231F4B92F001F1100996B80 /* reply.png in Resources */,
-				B231F4BA2F001F1100996B80 /* settings.png in Resources */,
-				B231F4BB2F001F1100996B80 /* back.png in Resources */,
-				B231F4BC2F001F1100996B80 /* refresh.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B275B9062F379B30007EEC1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B231F4542EF83EF200996B80 /* Sources */ = {
+		B275B8F22F379B02007EEC1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B231F4BD2F001F1100996B80 /* InputTool.swift in Sources */,
-				B231F4BE2F001F1100996B80 /* FeatureTool.swift in Sources */,
-				B231F4BF2F001F1100996B80 /* SuggestionsPanel.swift in Sources */,
-				B231F4C02F001F1100996B80 /* FeaturesPanel.swift in Sources */,
-				B2D616732F2944CF000950D3 /* TranslateSettingsPanel.swift in Sources */,
-				B231F4C12F001F1100996B80 /* SquareButton.swift in Sources */,
-				B231F4C22F001F1100996B80 /* ButtonsGrid.swift in Sources */,
-				B231F4C32F001F1100996B80 /* KeyboardPanel.swift in Sources */,
-				B231F4C42F001F1100996B80 /* MiniFeaturesPanel.swift in Sources */,
-				B2D616812F2E4FA1000950D3 /* AiKeyboardView.swift in Sources */,
-				B231F46C2EF83F1600996B80 /* AiKeyboardViewController.swift in Sources */,
-				B231F46D2EF83F1600996B80 /* DemoAiKeyboardApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B275B9042F379B30007EEC1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B275B90E2F379B30007EEC1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B275B9072F379B30007EEC1B /* ai_keyboard_deploy */;
+			targetProxy = B275B90D2F379B30007EEC1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		B231F4612EF83EF200996B80 /* Debug */ = {
+		B275B8FF2F379B03007EEC1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,16 +283,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		B231F4622EF83EF200996B80 /* Release */ = {
+		B275B9002F379B03007EEC1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -413,150 +340,163 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		B231F4642EF83EF200996B80 /* Debug */ = {
+		B275B9022F379B03007EEC1B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_MOVIES_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_PICTURE_FOLDER = readonly;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lol.ai-keyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "ai-keyboard.ai-keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 26.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B231F4652EF83EF200996B80 /* Release */ = {
+		B275B9032F379B03007EEC1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_APP_SANDBOX = YES;
-				ENABLE_FILE_ACCESS_DOWNLOADS_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_MOVIES_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_MUSIC_FOLDER = readonly;
-				ENABLE_FILE_ACCESS_PICTURE_FOLDER = readonly;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
-				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "lol.ai-keyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "ai-keyboard.ai-keyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
-				SDKROOT = auto;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 26.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B275B9122F379B30007EEC1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ai_keyboard_deploy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ai_keyboard_deploy;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai-keyboard.ai-keyboard.ai-keyboard-deploy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B275B9132F379B30007EEC1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ai_keyboard_deploy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ai_keyboard_deploy;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ai-keyboard.ai-keyboard.ai-keyboard-deploy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B231F4532EF83EF200996B80 /* Build configuration list for PBXProject "ai_keyboard" */ = {
+		B275B8F12F379B02007EEC1B /* Build configuration list for PBXProject "ai_keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B231F4612EF83EF200996B80 /* Debug */,
-				B231F4622EF83EF200996B80 /* Release */,
+				B275B8FF2F379B03007EEC1B /* Debug */,
+				B275B9002F379B03007EEC1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B231F4632EF83EF200996B80 /* Build configuration list for PBXNativeTarget "ai_keyboard" */ = {
+		B275B9012F379B03007EEC1B /* Build configuration list for PBXNativeTarget "ai_keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B231F4642EF83EF200996B80 /* Debug */,
-				B231F4652EF83EF200996B80 /* Release */,
+				B275B9022F379B03007EEC1B /* Debug */,
+				B275B9032F379B03007EEC1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B275B9112F379B30007EEC1B /* Build configuration list for PBXNativeTarget "ai_keyboard_deploy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B275B9122F379B30007EEC1B /* Debug */,
+				B275B9132F379B30007EEC1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B231F4502EF83EF200996B80 /* Project object */;
+	rootObject = B275B8EE2F379B02007EEC1B /* Project object */;
 }
